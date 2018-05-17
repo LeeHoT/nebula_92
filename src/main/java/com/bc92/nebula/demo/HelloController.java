@@ -9,11 +9,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * date: 2018/5/14
  */
 @Controller
+@RequestMapping("92")
 public class HelloController {
 
-    @RequestMapping("/hello")
+
+    @RequestMapping("/index")
     public String index(Model model){
         model.addAttribute("name", "Dear");
         return "index";
     }
+
+    @RequestMapping("top/index")
+    public String detail(Model model){
+        return "top/detail";
+    }
+
+    @RequestMapping("address/index")
+    public String address(Model model){
+
+        return "address/index";
+    }
+
+    @RequestMapping("photos/index")
+    public String photos(Model model){
+        return "photos/index";
+    }
+
+
+
 }
