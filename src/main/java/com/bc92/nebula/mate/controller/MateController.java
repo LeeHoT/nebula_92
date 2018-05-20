@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/nebula/92/")
-public class SchoolmateController {
+public class MateController {
 
     /**
      * 手机号,地址,公司,公司地址,学校,学校地址,班级
@@ -20,6 +20,8 @@ public class SchoolmateController {
      */
     @RequestMapping("register")
     public String register(Model model){
+
+
 
 
 
@@ -41,7 +43,7 @@ public class SchoolmateController {
         return "login";
     }
 
-    @RequestMapping("login/${name}")
+    @RequestMapping("login/{name}")
     public String login(Model model){
 
         return "index";

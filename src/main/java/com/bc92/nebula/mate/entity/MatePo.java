@@ -1,11 +1,13 @@
 package com.bc92.nebula.mate.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by leehotin
  * Date: 2018/5/18  上午7:37
  * To change this template use File | Settings | FileTemplates
  */
-public class SchoolmatePo {
+public class MatePo implements Serializable {
 
     private int id;
     private String name;

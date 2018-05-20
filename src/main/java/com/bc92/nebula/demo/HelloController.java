@@ -1,5 +1,8 @@
 package com.bc92.nebula.demo;
 
+import com.bc92.nebula.mate.dao.MateMapper;
+import com.bc92.nebula.mate.entity.MatePo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,13 +12,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * date: 2018/5/14
  */
 @Controller
-@RequestMapping("92")
 public class HelloController {
+    @Autowired
+    private MateMapper mateMapper;
 
-
-    @RequestMapping("/index")
+    @RequestMapping("index")
     public String index(Model model){
-        model.addAttribute("name", "Dear");
+        MatePo matePo = new MatePo();
+        matePo.setName("lihuiting");
+        matePo.setPhone("13552154299");
+        mateMapper.insert(matePo);
         return "index";
     }
 
